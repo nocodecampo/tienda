@@ -19,7 +19,7 @@ if(isset($_POST['username'])){
                 session_start();
                 $_SESSION['user'] = $user;
                 // Redireccionar a la página de inicio
-                header('Location: admin.php');
+                header('Location: admin');
                 exit;
             }else{
                 $error = 'Usuario o contraseña incorrectos';

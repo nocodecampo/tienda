@@ -1,6 +1,34 @@
 <?php 
-// Incluir el archivo de conexión a la base de datos
-include 'dbconnect.php';
+if(isset($_POST['username'])){
+    // Incluir el archivo de conexión a la base de datos
+    include 'dbconnect.php';
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    // Consulta para obtener el usuario y contraseña
+    $sql = "SELECT * FROM usuarios WHERE username = :username";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':username', $username);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Verificar si el usuario existe
+    if($user){
+        // Verificar si la contraseña es correcta
+        
+        if(password_verify($password, $user['password'])){
+            // Iniciar sesión
+            session_start();
+            $_SESSION['user'] = $user;
+            // Redireccionar a la página de inicio
+            header('Location: admin.php');
+            exit;
+        }else{
+            $error = 'Usuario o contraseña incorrectos';
+        }     
+    }else{
+       $error = 'Usuario o contraseña incorrectos';
+    }    
+}
 ?>
 
 
@@ -23,6 +51,9 @@ include 'dbconnect.php';
             <label for="password">Contraseña</label>
             <input type="password" name="password" id="password" placeholder="Tu contraseña" required>
             <input type="submit" value="Iniciar sesión">
+            <?php if(isset($error)): ?>
+                <span class="error"><?php echo $error; ?></span>
+            <?php endif; ?>
         </form>
         </div>
     </section>

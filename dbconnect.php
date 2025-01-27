@@ -1,9 +1,10 @@
 <?php
+include 'config.php';
 // Configuración de la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "formacombook";
+$servername = HOST;
+$username = DB_USER;
+$password = DB_PASS;
+$dbname = DB_DATABASE;
 
 // Crear conexión
 try {

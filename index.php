@@ -1,3 +1,9 @@
+<?php 
+// Incluir el archivo de conexión a la base de datos
+include 'dbconnect.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

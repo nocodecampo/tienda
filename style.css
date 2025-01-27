@@ -85,7 +85,46 @@ span.error{
     border-radius: 5px;
 }
 
-section.admin-panel{
+
+/* ADMIN PAGE*/
+
+header.header-admin{
+    background-color: #333;
+    color: #fff;
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+}
+ header.header-admin i{
+    font-size: 50px;
+ }
+
+ header.header-admin div{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+ }
+
+ .logout-button{
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+ }
+
+ .logout-button:hover{
+    background-color: #c82333;
+ }
+
+ header.header-admin p.welcome{
+    font-size: 18px;
+    font-weight: bold;
+ }
+
+ section.admin-panel{
     display: flex;
     justify-content: space-between;
     background-color: #f1f1f1;
@@ -98,11 +137,6 @@ section.admin-panel aside.admin-menu{
     padding: 20px;
     background-color:#ccc;
     color: #fff;
-}
-
-section.admin-panel aside.admin-menu h2{
-    font-size: 18px;
-    margin-bottom: 20px;
 }
 
 section.admin-panel aside.admin-menu ul{
@@ -131,7 +165,10 @@ section.admin-panel main.admin-content{
     padding: 24px;
 }
 
-footer{
+
+ /*FOOTER*/
+
+ footer{
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -140,46 +177,6 @@ footer{
     bottom: 0;
     width: 100%;
 }
-
-
-/* ADMIN PAGE*/
-
-header.header-admin{
-    background-color: #333;
-    color: #fff;
-    padding: 24px;
-    display: flex;
-    justify-content: space-between;
-}
- header.header-admin img.logo{
-    width: 50px;
-    margin: 0 20px;
- }
-
- header.header-admin div{
-    display: flex;
-    align-items: center;
-    gap: 24px;
- }
-
- .logout-button{
-    background-color: #dc3545;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
- }
-
- .logout-button:hover{
-    background-color: #c82333;
- }
-
- header.header-admin p.welcome{
-    font-size: 18px;
-    font-weight: bold;
- }
 
  /* MOBILE */
 

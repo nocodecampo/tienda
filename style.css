@@ -2,12 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration:none;
 }
 
 body{
     font-family: Arial, sans-serif;
     font-size:16px;
 }
+
+/* LOGIN PAGE */
 
 section.section-login{
     display: flex;
@@ -80,4 +83,66 @@ span.error{
     margin-bottom: 20px;
     border: 1px solid #f5c6cb;
     border-radius: 5px;
+}
+
+section.admin-panel{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+}
+
+section.admin-panel aside.admin-menu{
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* ADMIN PAGE*/
+
+header.header-admin{
+    background-color: #333;
+    color: #fff;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+ header.header-admin img.logo{
+    width: 50px;
+    margin: 0 20px;
+ }
+
+ header.header-admin div{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+ }
+
+ .logout-button{
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+ }
+
+ .logout-button:hover{
+    background-color: #c82333;
+ }
+
+ header.header-admin p.welcome{
+    font-size: 18px;
+    font-weight: bold;
+ }
+
+ /* MOBILE */
+
+ div.form-container{
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
 }

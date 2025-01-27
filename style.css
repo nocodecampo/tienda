@@ -17,8 +17,18 @@ section.section-login{
     background-color: #f1f1f1;
 }
 
+div.form-container{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+div.form-container h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 form.login-form{
-    width: 300px;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;

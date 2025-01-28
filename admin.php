@@ -27,6 +27,7 @@ $user = $_SESSION['user'];
         </main>
     </section>
     <?php include 'partials/footer.php' ?>
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>

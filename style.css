@@ -89,11 +89,14 @@ span.error{
 /* ADMIN PAGE*/
 
 header.header-admin{
+    position:fixed;
+    width: 100%;
     background-color: #333;
     color: #fff;
-    padding: 24px 48px;
+    padding: 24px 32px;
     display: flex;
     justify-content: space-between;
+   
 }
  header.header-admin i{
     font-size: 50px;
@@ -133,8 +136,8 @@ header.header-admin{
 section.admin-panel aside.admin-menu{
     width: 100%;
     max-width: 250px;
-    height: 100vh;
-    padding: 20px;
+    height: 85vh;
+    padding: 24px 32px;
     background-color:#ccc;
     color: #fff;
 }
@@ -148,7 +151,7 @@ section.admin-panel aside.admin-menu ul li{
 }
 
 section.admin-panel aside.admin-menu ul li a{
-    color: #fff;
+    color: #333;
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -156,13 +159,20 @@ section.admin-panel aside.admin-menu ul li a{
     transition: background-color 0.3s;
 }
 
+aside.admin-menu ul li a i{
+    margin-right: 10px;
+}
+
 section.admin-panel aside.admin-menu ul li a:hover{
     background-color: #555;
+    color:#fff;
 }
 
 section.admin-panel main.admin-content{
     width: 100%;
+    height: 85vh;
     padding: 24px;
+    overflow-y:auto;
 }
 
 

@@ -33,23 +33,26 @@ $stmt = $conn->prepare($sql);
                         <td><?php echo $proveedor['nombre']; ?></td>
                         <td><?php echo $proveedor['web']; ?></td>
                         <td>
-                            <a href="editar-proveedor.php?id=<?php echo $proveedor['id']; ?>" ><i class="fa-solid fa-pen-to-square"></i></a>
-                            <a href="eliminar-proveedor.php?id=<?php echo $proveedor['id']; ?>" ><i class="fa-solid fa-trash"></i></a>
-                            <a href="proveedores.php?id=<?php echo $proveedor['id']; ?>" ><i class="fa-solid fa-address-book"></i></a>
-                            <a href="proveedor.php?id=<?php echo $proveedor['id']; ?>" ><i class="fa-solid fa-eye"></i></a>
+                            <a href="editar-proveedor.php?id=<?php echo $proveedor['id']; ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="eliminar-proveedor.php?id=<?php echo $proveedor['id']; ?>"><i class="fa-solid fa-trash"></i></a>
+                            <a href="proveedores.php?id=<?php echo $proveedor['id']; ?>"><i class="fa-solid fa-address-book"></i></a>
+                            <a href="proveedor.php?id=<?php echo $proveedor['id']; ?>"><i class="fa-solid fa-eye"></i></a>
                         </td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
-        <hr>
         <div class="add-form-container">
             <h3>Añadir proveedor</h3>
             <form action="nuevo_proveedor.php" method="post" class="nuevo-proveedor">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre proveedor" required>
-                <label for="web">Web:</label>
-                <input type="text" name="web" id="web" placeholder="http://" required>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre proveedor" required>
+                </div>
+                <div>
+                    <label for="web">Web:</label>
+                    <input type="text" name="web" id="web" placeholder="http://" required>
+                </div>
                 <input type="submit" value="Guardar">
             </form>
         </div>

@@ -200,7 +200,7 @@ table.tabla-resultados tr:nth-child(even) {
 }
 
 table.tabla-resultados td {
-    padding: 8px;
+    padding: 16px 8px;
     border-bottom: solid 1px gray;
 }
 
@@ -218,9 +218,16 @@ div.add-form-container{
 
 form.nuevo-proveedor{
     display: flex;
-    align-items: center;
+    align-items: last baseline;
+    gap: 24px;
     padding: 16px;
     background-color: bisque;
+}
+
+form.nuevo-proveedor div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 form.nuevo-proveedor input[type="text"]{

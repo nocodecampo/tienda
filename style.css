@@ -177,6 +177,7 @@ section.admin-panel main.admin-content{
     gap: 24px;
 }
 
+
 /*TABLA RESULTADOS*/
 
 table.tabla-resultados{
@@ -232,9 +233,44 @@ form.nuevo-proveedor div{
 
 form.nuevo-proveedor input[type="text"]{
     padding: 8px 12px;
+    border-radius: 4px;
+    border: solid 1px #777;
 }
 
 form.nuevo-proveedor input[type="submit"]{
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: darkslategrey;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* FORMULARIO AÑADIR CATEGORÍAS */
+
+form.nueva-categoria{
+    display: flex;
+    align-items: last baseline;
+    gap: 24px;
+    padding: 16px;
+    background-color: bisque;
+}
+
+form.nueva-categoria div{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form.nueva-categoria input[type="text"]{
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: solid 1px #777;
+}
+
+form.nueva-categoria input[type="submit"]{
+    min-width: 150px;
     padding: 8px 12px;
     border-radius: 4px;
     border: none;
